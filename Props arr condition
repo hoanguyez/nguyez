@@ -1,0 +1,40 @@
+import React, { Component } from 'react';
+
+class Greeting extends Component {
+
+  render() {
+    return (
+      <div>
+        <h1> Hello Im { this.props.name } </h1>
+        <h2> Age { this.props.age } </h2>
+      </div>
+    );
+  }
+}
+
+class LotsOfGreetings extends Component {
+
+    render() {
+
+        let lists = [
+                {name:'Nguyen', age:22, status:true},
+                {name:'Hoang', age:21, status:false}
+             ]
+        let products = lists.map(( list, index ) => {
+            let resuls = '';
+            if(list.status){
+                resuls = <Greeting
+                            key = { index }
+                            name = { list.name }
+                            age = { list.age }
+                         />;
+            }  
+            return resuls ;
+        });
+
+    return (
+      <div>{ products }</div>
+    );
+  }
+}
+export default LotsOfGreetings;
