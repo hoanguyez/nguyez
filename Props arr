@@ -16,8 +16,8 @@ class LotsOfGreetings extends Component {
     render() {
 
         let list = [
-                {name:'Nguyen', age:22, status:'true'},
-                {name:'Hoang', age:21, status:'fale'}
+                {name:'Nguyen'},
+                {name:'Hoang'}
              ]
         let products = list.map((list, index) => {
           return <Greeting
